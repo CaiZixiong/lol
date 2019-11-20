@@ -51,6 +51,7 @@ body{
           line-height: 30px;
           padding: 0 10px;
        }
+     
     }
     li:hover a{
         text-decoration: underline;
@@ -199,15 +200,26 @@ body{
      }
     }
     .wapper>.shopping-cart{
-       
+         position: relative;
         float: right;
-       >a{color:rgb(247, 44, 8);
+       >a{
+        color:rgb(247, 44, 8);
         line-height: 76px;
         text-align: center;
         font-size: 18px;    
-        display: inline-block;
-         width: 192px;
+        display:block;
+        width: 192px;
         height: 76px;
+        >span{
+            display: inline-block;
+            position: absolute;
+            top: 27px;
+            left: 22px;
+            width: 30px;
+            height: 30px;
+            background:  url(../img/navico.png) no-repeat -237px -5px;
+       
+        }
     }
 }
 }

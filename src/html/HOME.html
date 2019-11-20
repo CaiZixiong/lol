@@ -7,10 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>英雄联盟道聚城-集道具聚欢乐</title>
     <link rel="stylesheet" href="../style/HOME.css">
-   
+
     <script data-main="../js/HOME-main" src="../js/require.js"></script>
-    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../js/dr.js"></script>
+   
+    
+   
+    
+   
     <!-- <script data-main="../js/dr-main" src="../js/require.js"></script> -->
 </head>
 
@@ -28,8 +31,8 @@
             </div>
             <!--右边的li标签-->
             <div class="one-nav-right">
-                <li id="loginStart" ><a href="javascript:;">你还未登录，请登录</a></li>
-                <li><a href="javascript:;">我的订单</a>|</li>
+                <li id="loginStart" ><a href="javascript:;" id="dr">你还未登录，请登录</a></li>
+                <li><a href="javascript:;" >我的订单</a>|</li>
                 <li><a href="javascript:;">个人中心</a>|</li>
                 <li><a href="javascript:;">帮助中心</a>|</li>
                 <li class="lastli"><a href="javascript:;">游戏导航</a>   </li>
@@ -70,7 +73,7 @@
 </div>
 </div>
 <div class="login_form">
-<form id="loginform" name="loginform" action="#" method="post" target="_self">
+<div id="loginform" name="loginform" action="#" method="post" target="_self">
 <div class="uinArea" id="uinArea">
 <label class="input_tips" id="uin_tips" for="u">QQ号码/手机/邮箱</label>
 <div class="inputOuter">
@@ -86,21 +89,21 @@
 </div>
 <div class="lock_tips" id="caps_lock_tips">
 <span class="lock_tips_row"></span>
-<span>大写锁定已打开
- </span>
+<!-- <span>大写锁定已打开
+ </span> -->
 </div>
 </div>
 <div class="submit">
 <a class="login_button" href="javascript:void(0);">
-<input type="button" tabindex="6" value="登 录" class="btn" id="login_button" />
+<input type="submit" tabindex="6" value="登 录" class="btn" id="login_button" />
 </a>
 </div>
-</form>
+</div>
 </div>
 <div class="bottom" id="bottom_web">
 <a href="#" class="link" id="forgetpwd">忘了密码？</a>
 <span class="dotted">|</span>
-<a href="#" class="link">注册新帐号</a>
+<a href="./enroll.html" class="link">注册新帐号</a>
 <span class="dotted">|</span>
 <a class="link" id="feedback_web" href="#">意见反馈</a>
 </div>
@@ -111,7 +114,7 @@
 请用手机app<a class="qr_link" href="#">QQ安全中心V1.5</a>扫描二维码
 </div>
 <div class="qrlogin_bg"></div>
-<img class="qrlogin_img" id="qrlogin_img" src="images/ptqrshow.png" alt="" />
+<!-- <img class="qrlogin_img" id="qrlogin_img" src="img/ptqrshow.png" alt="" /> -->
 </div>
 <div class="bottom" id="bottom_qr">
 <a href="#" class="link" id="qrlogin_help">二维码使用帮助</a>
@@ -125,9 +128,6 @@
 </div>
 </div>
 </div>
-<script type="text/javascript">
-    $.login('#loginStart');
-</script>
 <!-- 鼠标移入 二级导航-->
         <table id="ds-on">
                 <tr >
@@ -231,7 +231,8 @@
        <li><a href="">周边商场</a></li>
        <li><a href="">个人中心</a></li>
         </ul>
-        <div class="shopping-cart"><a href="">购物车 (0)</a></div> 
+   
+        <div class="shopping-cart"><a href="./shopping-car.htm"><span></span> 购物车 (0)</a></div> 
      </div>
 
   </div> 
@@ -259,7 +260,7 @@
     <div class="enter-bar">
         <div class="enter-top">
             <img src="../img/default.gif" alt="">
-            <p>你还未登录哦，<a href="">立刻登录</a>
+            <p class="gb"  >你还未登录哦，<a href="javascript:;">立刻登录</a>
             购买超值商品！</p>
         </div>
         <div class="enter-center">
@@ -395,15 +396,15 @@
                 <li>
                     <a href=""><b>新品上架</b></a>
                 </li>
-                  <li>
+                  <!-- <li>
                       <a href=""><b>热门推荐</b></a>
-                  </li>
+                  </li> -->
                 <div class="morebox">
                   <a href="">更多></a>
                 </div>
             </ul>
           <div id="new-mian">
-              <div class="prop">
+              <!-- <div class="prop">
                 <dt>
                     <a href="">
                         <img src="../img/2-157017-.jpg" width="116" height="212">
@@ -424,162 +425,9 @@
                     </div>
                    
                 </dd>
-              </div>
-              <div class="prop">
-                <dt>
-                    <a href="">
-                        <img src="../img/2-157017-.jpg" width="116" height="212">
-                    </a>
-                </dt>
-                <dd>
-                    <a href="" class="bt">
-                    	<strong>战场BOSS 亚索</strong>
-                    </a>
-                   <div class="bxlist-t1">
-						Q币价：<span >&nbsp;&nbsp;&nbsp;79.00</span> <span>Q币</span>
-					</div>
-					<div class="bxlist-t1">
-						微信价：<span >&nbsp;&nbsp;&nbsp;¥</span><span>76.63</span>
-					</div>
-					<div class="bxlist-t2">
-                        <a href="" data-seqid="18400" class="buy-now">立即购买</a>
-                    </div>
-                   
-                </dd>
-              </div>
-              <div class="prop">
-                <dt>
-                    <a href="">
-                        <img src="../img/2-157017-.jpg" width="116" height="212">
-                    </a>
-                </dt>
-                <dd>
-                    <a href="" class="bt">
-                    	<strong>战场BOSS 亚索</strong>
-                    </a>
-                   <div class="bxlist-t1">
-						Q币价：<span >&nbsp;&nbsp;&nbsp;79.00</span> <span>Q币</span>
-					</div>
-					<div class="bxlist-t1">
-						微信价：<span >&nbsp;&nbsp;&nbsp;¥</span><span>76.63</span>
-					</div>
-					<div class="bxlist-t2">
-                        <a href="" data-seqid="18400" class="buy-now">立即购买</a>
-                    </div>
-                   
-                </dd>
-              </div>
-              <div class="prop">
-                <dt>
-                    <a href="">
-                        <img src="../img/2-157017-.jpg" width="116" height="212">
-                    </a>
-                </dt>
-                <dd>
-                    <a href="" class="bt">
-                    	<strong>战场BOSS 亚索</strong>
-                    </a>
-                   <div class="bxlist-t1">
-						Q币价：<span >&nbsp;&nbsp;&nbsp;79.00</span> <span>Q币</span>
-					</div>
-					<div class="bxlist-t1">
-						微信价：<span >&nbsp;&nbsp;&nbsp;¥</span><span>76.63</span>
-					</div>
-					<div class="bxlist-t2">
-                        <a href="" data-seqid="18400" class="buy-now">立即购买</a>
-                    </div>
-                   
-                </dd>
-              </div>
-              <div class="prop">
-                <dt>
-                    <a href="">
-                        <img src="../img/2-157017-.jpg" width="116" height="212">
-                    </a>
-                </dt>
-                <dd>
-                    <a href="" class="bt">
-                    	<strong>战场BOSS 亚索</strong>
-                    </a>
-                   <div class="bxlist-t1">
-						Q币价：<span >&nbsp;&nbsp;&nbsp;79.00</span> <span>Q币</span>
-					</div>
-					<div class="bxlist-t1">
-						微信价：<span >&nbsp;&nbsp;&nbsp;¥</span><span>76.63</span>
-					</div>
-					<div class="bxlist-t2">
-                        <a href="" data-seqid="18400" class="buy-now">立即购买</a>
-                    </div>
-                   
-                </dd>
-              </div>
-              <div class="prop">
-                <dt>
-                    <a href="">
-                        <img src="../img/2-157017-.jpg" width="116" height="212">
-                    </a>
-                </dt>
-                <dd>
-                    <a href="" class="bt">
-                    	<strong>战场BOSS 亚索</strong>
-                    </a>
-                   <div class="bxlist-t1">
-						Q币价：<span >&nbsp;&nbsp;&nbsp;79.00</span> <span>Q币</span>
-					</div>
-					<div class="bxlist-t1">
-						微信价：<span >&nbsp;&nbsp;&nbsp;¥</span><span>76.63</span>
-					</div>
-					<div class="bxlist-t2">
-                        <a href="" data-seqid="18400" class="buy-now">立即购买</a>
-                    </div>
-                   
-                </dd>
-              </div>
-              <div class="prop">
-                <dt>
-                    <a href="">
-                        <img src="../img/2-157017-.jpg" width="116" height="212">
-                    </a>
-                </dt>
-                <dd>
-                    <a href="" class="bt">
-                    	<strong>战场BOSS 亚索</strong>
-                    </a>
-                   <div class="bxlist-t1">
-						Q币价：<span >&nbsp;&nbsp;&nbsp;79.00</span> <span>Q币</span>
-					</div>
-					<div class="bxlist-t1">
-						微信价：<span >&nbsp;&nbsp;&nbsp;¥</span><span>76.63</span>
-					</div>
-					<div class="bxlist-t2">
-                        <a href="" data-seqid="18400" class="buy-now">立即购买</a>
-                    </div>
-                   
-                </dd>
-              </div>
-              <div class="prop">
-                <dt>
-                    <a href="">
-                        <img src="../img/2-157017-.jpg" width="116" height="212">
-                    </a>
-                </dt>
-                <dd>
-                    <a href="" class="bt">
-                    	<strong>战场BOSS 亚索</strong>
-                    </a>
-                   <div class="bxlist-t1">
-						Q币价：<span >&nbsp;&nbsp;&nbsp;79.00</span> <span>Q币</span>
-					</div>
-					<div class="bxlist-t1">
-						微信价：<span >&nbsp;&nbsp;&nbsp;¥</span><span>76.63</span>
-					</div>
-					<div class="bxlist-t2">
-                        <a href="" data-seqid="18400" class="buy-now">立即购买</a>
-                    </div>
-                   
-                </dd>
-              </div>
-          </div>
+              </div> -->
+            
+         </div>
         </div>
         <!-- 右边排行-->
         <div class="new-right">
@@ -713,6 +561,7 @@
     </div>
 </div>
 </div>
+<!--底部-->
 <footer>
     <div class="wapper">
         <div class="foot-info">

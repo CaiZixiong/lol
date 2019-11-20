@@ -1,4 +1,4 @@
-define(['jquery'],function($){
+define(['jquery','dr'],function($){
     
         return {
             banner: function() {
@@ -43,8 +43,8 @@ define(['jquery'],function($){
                 $('.mover').on('mouseout', () => {
                     t(); //鼠标离开后重启时间函数，图片移动
                 });
-            },
-    
+                $.login('#loginStart');
+            }
         }
      });
    

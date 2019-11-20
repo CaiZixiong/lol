@@ -1,9 +1,20 @@
-// 
+
 require.config({
    
     paths:{
         jquery:'../../node_modules/jquery/dist/jquery.min',
-        HOME:"./HOME"
+        dr:"./dr",
+        drajax:"drajax",
+        md5:"./jquery.md5",
+        get:'./get-render-HOME',
+      
+      
+    },
+    shim:{
+        md5:['jquery'],
+        dr:['jquery','md5'],
+       
+        
     }
 });
 
@@ -24,6 +35,12 @@ require(['jquery'],function(){
     })
 });
 
-require(['jquery','HOME'],function($,HOME){
-     HOME.banner()
-})
+require(['jquery','dr','HOME','drajax'],function($,dr,HOME,  drajax){
+     HOME.banner();
+});
+require(['jquery','md5','dr','drajax'],function($,md5,dr,drajax){
+    drajax.drajax();
+});
+require(['jquery','get'],function($,get){
+    get.render();
+});

@@ -1,4 +1,4 @@
-(function($) {
+(function($){
     $.extend({
         "login": function(loginBtn) {
             if ($(loginBtn).length === 0) {
@@ -115,5 +115,5 @@
                 }
             });
         }
-    });
-}(jQuery));
+    }); 
+})(jQuery)

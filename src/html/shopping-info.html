@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情业</title>
+    <link rel="stylesheet" href="../style/shopping-info.css">
+
+
+    <script data-main="../js/get-info.main" src="../js/require.js"></script>
+   
+    <!-- <script src="../js/on-click.js"></script> -->
+</head>
+
+<body>
+    <!-- ================整个的背景图  back ============-->
+    <div class="back">
+        <!-- =================通用导航栏 one-nav========================-->
+        <nav class="one-nav">
+            <!--==================版心==================== /-->
+            <div class="wapper">
+                <!--左边li标签-->
+                <div class=one-nav-left>
+                    <li><a href="javascript:;">手机版 &nbsp&nbsp&nbsp&nbsp&nbsp|</a></li>
+                    <li><a href="javascript:;">Q币充值</a></li>
+                </div>
+                <!--右边的li标签-->
+                <div class="one-nav-right">
+                    <li id="loginStart"><a href="javascript:;" id="dr">你还未登录，请登录</a></li>
+                    <li><a href="javascript:;">我的订单</a>|</li>
+                    <li><a href="javascript:;">个人中心</a>|</li>
+                    <li><a href="javascript:;">帮助中心</a>|</li>
+                    <li class="lastli"><a href="javascript:;">游戏导航</a> </li>
+                </div>
+            </div>
+        </nav>
+        <!--鼠标悬浮效果-->
+        <table id="ds-on">
+            <tr>
+                <td><a href="">网页游戏<span>(6)</span></a></td>
+                <td colspan="3" "><a href=" ">角色扮演<span>(18)</span></a></td>
+                                <td colspan="2 "><a href=" ">竞技游戏<span>(11)</span></a></td>
+                                <td><a href=" ">休闲游戏<span>(3)</span></a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=" ">部落守护(...</a></td>
+                                <td><a href=" ">上古世纪</a></td>
+                                <td><a href=" ">幻想世界</a></td>
+                                <td><a href=" ">仙侠传</a></td>
+                                <td><a href=" ">穿越火线</a></td>
+                                <td><a href=" ">极品飞车ol</a></td>
+                                <td><a href=" "></a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=" ">捕鱼达人</a></td>
+                                <td><a href=" ">剑灵</a></td>
+                                <td><a href=" ">疾风之刃(11)</a></td>
+                                <td><a href=" ">轩辕</a></td>
+                                <td><a href=" ">CODOL使命...</a></td>
+                                <td><a href=" ">逆战</a></td>
+                                <td><a href=" ">炫舞</a></td>
+                            </tr>
+                    
+                            <tr>
+                                <td><a href=" ">英魂之刃</a></td>
+                                <td><a href=" ">刀剑2</a></td>
+                                <td><a href=" ">冒险岛2</a></td>
+                                <td><a href=" ">御龙在天</a></td>
+                    
+                                <td><a href=" ">FOFA oL3</a></td>
+                                <td><a href=" ">枪神纪</a></td>
+                                <td><a href=" ">炫舞时代</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href=" ">宠物大乐斗</a></td>
+                                <td><a href=" ">地下城与勇士</a></td>
+                                <td><a href=" ">QQ三国</a></td>
+                                <td><a href=" ">御龙在天经典版</a></td>
+                                <td><a href=" ">FOFA oL4</a></td>
+                                <td><a href=" ">雷霆战争</a></td>
+                                <td class="no-bor "></td>
+                               
+                    
+                            </tr>
+                    
+                            <tr>
+                                <td><a href=" ">火影忍者oN</a></td>
+                                <td><a href=" ">斗战神</a></td>
+                                <td><a href=" ">天堂</a></td>
+                                <td class="no-bor "></td>
+                                <td><a href=" ">英雄联盟</a></td>
+                                <td class="no-bor "></td>
+                                <td class="no-bor "></td>
+                            </tr>
+                            <tr>
+                                <td><a href=" ">烽火战国</a></td>
+                                <td><a href=" ">自由幻想</a></td>
+                                <td><a href=" ">天堂2</a></td>
+                                <td class="no-bor "></td>
+                                <td><a href=" ">NBA2KOL</a></td>
+                                <td class="no-bor "></td>
+                                <td class="no-bor "></td>
+                            </tr>
+                            <tr>
+                                <td class="no-bor "></td>
+                                    <td><a href=" ">QQ幻想</a></td>
+                                    <td><a href=" ">天涯明月刀</a></td>
+                                    <td class="no-bor "></td>
+                                    <td><a href=" ">NBA2KOL2</a></td>
+                                    <td class="no-bor "></td>
+                                    <td class="no-bor "></td>
+                            </tr>
+                        </table> 
+        <!-- QQ登入弹窗-->  
+        <div id="_login_div_quick_">
+                <div class="login_no_qlogin" id="login">
+                <div id="header" class="header">
+                <div class="logo"></div>
+                <div class="switch" id="switch">
+                <a class="switch_btn" id="switch_qlogin" href="javascript:void(0);" tabindex="7">快速登录</a>
+                <a class="switch_btn_focus" id="switch_login" href="javascript:void(0);" tabindex="8">帐号登录</a>
+                <div class="switch_bottom" id="switch_bottom"></div>
+                </div>
+                <a id="close" class="close" href="javascript:void(0)" title="关闭" tabindex="9"></a>
+                </div>
+                <div class="qrswitch" id="qrswitch">
+                <a class="qrswitch_logo" id="qrswitch_logo" href="javascript:void(0)" title="二维码登录"></a>
+                </div>
+                <div class="web_qr_login" id="web_qr_login">
+                <div class="web_qr_login_show" id="web_qr_login_show">
+                <div class="web_login" id="web_login">
+                <div class="tips" id="tips">
+                <div class="error_tips" id="error_tips">
+                <span class="error_logo" id="error_logo"></span>
+                <span class="err_m" id="err_m"></span>
+                </div>
+                <div class="operate_tips" id="operate_tips">
+                <span class="operate_content">手机号码也可登录哦，<a class="tips_link" id="bind_account" href="javascript:void(0);">登录个人中心绑定</a>
+                </span>
+                <span class="down_row"></span>
+                </div>
+                <div class="loading_tips" id="loading_tips">
+                <span id="loading_wording">登录中</span>
+                <img src="../img/load.gif" alt="加载中..." />
+                </div>
+                </div>
+                <div class="login_form">
+                <div id="loginform" name="loginform" action="#" method="post" target="_self">
+                <div class="uinArea" id="uinArea">
+                <label class="input_tips" id="uin_tips" for="u">QQ号码/手机/邮箱</label>
+                <div class="inputOuter">
+                <input type="text" class="inputstyle" id="u" name="u" value="" tabindex="1" />
+                <a class="uin_del" id="uin_del" href="javascript:void(0);"></a>
+                </div>
+                <ul class="email_list" id="email_list"></ul>
+                </div>
+                <div class="pwdArea" id="pwdArea">
+                <label class="input_tips" id="pwd_tips" for="p">密码</label>
+                <div class="inputOuter">
+                <input type="password" class="inputstyle password" id="p" name="p" value="" maxlength="16" tabindex="2" />
+                </div>
+                <div class="lock_tips" id="caps_lock_tips">
+                <span class="lock_tips_row"></span>
+                <!-- <span>大写锁定已打开
+                 </span> -->
+                </div>
+                </div>
+                <div class="submit">
+                <a class="login_button" href="javascript:void(0);">
+                <input type="submit" tabindex="6" value="登 录" class="btn" id="login_button" />
+                </a>
+                </div>
+                </div>
+                </div>
+                <div class="bottom" id="bottom_web">
+                <a href="#" class="link" id="forgetpwd">忘了密码？</a>
+                <span class="dotted">|</span>
+                <a href="./enroll.html" class="link">注册新帐号</a>
+                <span class="dotted">|</span>
+                <a class="link" id="feedback_web" href="#">意见反馈</a>
+                </div>
+                </div>
+                <div class="qrlogin" id="qrlogin">
+                <div class="qr_step" id="qrlogin_step1">
+                <div class="qr_tips">
+                请用手机app<a class="qr_link" href="#">QQ安全中心V1.5</a>扫描二维码
+                </div>
+                <div class="qrlogin_bg"></div>
+                <!-- <img class="qrlogin_img" id="qrlogin_img" src="img/ptqrshow.png" alt="" /> -->
+                </div>
+                <div class="bottom" id="bottom_qr">
+                <a href="#" class="link" id="qrlogin_help">二维码使用帮助</a>
+                <span class="dotted">|</span>
+                <a href="#" class="link">注册新帐号</a>
+                <span class="dotted">|</span>
+                <a class="link" id="feedback_qr" href="#">意见反馈</a>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                        
+                <!--===================通用主题栏 menu ================-->
+                <div class="menu ">
+             <!--=====================搜索栏===========-->
+               <div class="search-box ">
+                   <div class="wapper ">
+                       <div class="search-left "><a href=" " >lol道聚城官网</a></div>
+                       <div class="search-conter ">
+                            <input type="text " name=" " id=" " placeholder=请输入道具进行搜索>
+                           <span><a href=" ">搜索</a></span>
+                    </div>
+                       <div class="search-right "><a href=" ">英雄联盟</a></div>
+                   </div>
+               </div>
+              <!--================ 主导航栏 ==============-->
+              <div class="nav-big ">
+                 <div class="wapper ">
+                     <ul>
+                   <li><a href="./HOME.html">首页</a></li>
+                   <li><a href=" ">商品列表</a></li>
+                   <li><a href=" ">活动专区</a></li>
+                   <li><a href=" ">限时折扣</a></li>
+                   <li><a href=" ">聚豆园</a></li>
+                   <li><a href=" ">周边商场</a></li>
+                   <li><a href=" ">个人中心</a></li>
+                    </ul>
+                    <div class="shopping-cart "><a href="./shopping-car.htm">购物车 (0)</a></div> 
+                 </div>
+            
+              </div> 
+              <!--==================副导航栏==================-->
+              <div class="nav-min ">
+                    <div class="wapper ">
+                     <ul>
+                         <li><a href=" ">全部分类</a></li>
+                         <li><a href=" ">英雄</a></li>
+                         <li><a href=" ">皮肤</a></li>
+                         <li><a href=" ">道具</a></li>
+                         <li><a href=" ">守卫眼皮肤</a></li>
+                         <li><a href=" ">道具包</a></li>
+                     </ul>
+                  </div>
+                </div>
+         </div>
+        </div>
+     <!-- 位置-->
+     <div class="location-box ">
+            <div class="wapper ">
+                    您现在的位置：<a href="/lol/ ">英雄联盟></a>&gt;<a href="/lol/cart.shtml ">全部商品></a>&gt;<a href="/lol/cart.shtml ">商品详情</a>
+     </div> 
+  </div>
+  <!--商品详情-->
+  <div class="main ">
+     <div class="wapper ">
+            <div class="main-left ">
+                <div>
+                    <h3>看了该商品的用户还看了
+                        <span></span>
+                    </h3>
+                   <ul></ul>
+                </div>
+                <div>
+                        <h3>猜你喜欢<span></span></h3>
+                        <ul></ul>
+                </div>
+               <div>
+                         <h3>周边商场<span></span></h3>
+                         <ul>
+                             <li>
+                                 <img src="../img/20191110114539_25606.jpg " alt=" ">
+                                 <p class="sp-name ">True Damage 迷你手办套装</p>
+                                 <p class="sp-pri "><strong>￥220.00</strong></p>
+                             </li>
+                             <li>
+                                    <img src="../img/20191110114539_25606.jpg " alt=" ">
+                                    <p class="sp-name ">True Damage 迷你手办套装</p>
+                                    <p class="sp-pri "><strong>￥220.00</strong></p>
+                                </li>
+                                <li>
+                                        <img src="../img/20191110114539_25606.jpg " alt=" ">
+                                        <p class="sp-name ">True Damage 迷你手办套装</p>
+                                        <p class="sp-pri "><strong>￥220.00</strong></p>
+                                    </li>
+                         </ul>
+               </div>
+                <div>
+                         <h3>最近浏览过的商品<span></span></h3>
+                         <ul>
+                                <li class=" ">
+                                        <a  href=" " class="rank-link ">
+                                            <!-- <div class="comico ico-rank ">01</div> -->
+                                            <div class="dj-img ">
+                                                <img src="../img/20170216_28862_2202.jpg " width="76 " height="56 ">
+                                            </div>
+                                            <div class="dj-info ">
+                                                <p class="djname ">腥红之月 烬</p>
+                                                 <p class="djprice ">Q币价：79.00 Q币</p>
+                                                <p class="djcpri " >微信价：<strong>￥76.63 </strong></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class=" ">
+                                            <a  href=" " class="rank-link ">
+                                                <!-- <div class="comico ico-rank ">01</div> -->
+                                                <div class="dj-img ">
+                                                    <img src="../img/20170216_28862_2202.jpg " width="76 " height="56 ">
+                                                </div>
+                                                <div class="dj-info ">
+                                                    <p class="djname ">腥红之月 烬</p>
+                                                     <p class="djprice ">Q币价：79.00 Q币</p>
+                                                    <p class="djcpri " >微信价：<strong>￥76.63 </strong></p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    
+                                            
+                         </ul>
+                </div>
+            </div>
+            <div class="main-right ">
+                <!-- <div class="info ">
+                    <div class="commodity ">
+                         <div class="com-left ">
+                             <img src="../img/2-84014-.jpg " alt=" " >
+                            <a href="" class="sc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;收藏商品</a>
+                             <div class="fdj"></div>
+                            
+                         </div>
+                         <div class="com-right">
+                             <h4>源计划:暗影 阿卡丽</h4>
+                             <div class="pic">
+                                 
+                                <p class="qB">Q币价:<a href=""> 79 </a>Q币</p>
+                               <p class="wx">微信价:<a href="">￥76.63</a></p>
+                             </div>
+                             <p class="p">期限:永久</p>
+                             <a href="" class="car">加入购物车</a> <a href="" class="gei">赠送</a>
+                         </div>
+                    </div>
+                    <div class="xq">
+                        <a href="">商品详情</a>
+                        <p>源计划：暗影 阿卡丽</p>
+                    </div> 
+                     <div class="onclic">
+                                 <img src="../img/2-84014-.jpg" alt="">
+                                 <span class="p">x</span>
+                     </div> 
+                </div> -->
+            </div>
+     </div>
+  </div>
+ 
+     <footer>
+            <div class="wapper ">
+                <div class="foot-info ">
+                    <div class="info ">
+                        <h5>我是新手</h5>
+                        <ul>
+                            <li><a href=" ">什么是道聚城</a></li>
+                            <li><a href=" ">如果购买</a></li>
+                            <li><a href=" ">如何赠送</a></li>
+                            <li><a href=" ">如何回去聚豆</a></li>
+                        </ul>
+                    </div>
+                    <div class="info ">
+                            <h5>个人中心</h5>
+                            <ul>
+                                <li><a href=" ">发货时间</a></li>
+                                <li><a href=" ">如何领取</a></li>
+                                <li><a href=" ">补发规则</a></li>
+                                <li><a href=" ">VIP价定义</a></li>
+                                <li><a href=" ">道具状态定义</a></li>
+                            </ul>
+                     </div>
+                   <div class="info ">
+                                <h5>支付方式</h5>
+                                <ul>
+                                    <li><a href=" ">支付方式</a></li>
+                                    <li><a href=" ">购物点支付</a></li>
+                                    <li><a href=" ">任何充值</a></li>
+                                   
+                                </ul>
+                   </div>
+                  <div class="info ">
+                                    <h5>腾讯在线服务</h5>
+                                    <ul>
+                                        <li><a href=" ">腾讯官方在线服务 </a></li>
+                                        
+                                    </ul>
+                   </div>
+                   <div class="erwm ">
+                       <li>
+                           <img src="../img/zsdjc.png " alt=" ">
+                           <p>掌上道聚城</p>
+                       </li>
+                       <li>
+                           <img src="../img/wechatdjc.png " alt=" ">
+                           <p>道聚城公众号</p>
+                       </li>
+                   </div>
+                </div>
+                <div class="foot-about ">
+                      <p>
+                          <a href=" ">腾讯互动娱乐 |</a>
+                          <a href=" ">服务条款 |</a>
+                          <a href=" ">腾讯游戏隐私保护指引 |</a>
+                          <a href=" ">广告服务 |</a>
+                          <a href=" ">腾讯游戏招聘 |</a>
+                          <a href=" ">腾讯游戏客服 |</a>
+                          <a href=" ">游戏地图 |</a>
+                          <a href=" ">成长守护平台 |</a>
+                          <a href=" ">商务合作 |</a>
+                         <a href=" "> 网站导航 |</a>
+                      </p>
+                      <p >COPYRIGHT © 1998 – 2019 TENCENT. ALL RIGHTS RESERVED.</p>
+                      <p >腾讯公司 版权所有</p>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
