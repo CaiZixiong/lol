@@ -215,15 +215,51 @@ body {
   background: #f3f4f6;
   width: 1146px;
 }
-.main > .wapper > .sp-info #cnm {
+.main > .wapper > .sp-info #info-top {
   width: 100%;
   height: 36px;
   border-bottom: 1px #9f9f9f solid;
   padding: 0 16px;
   font-size: 14px;
 }
-.main > .wapper > .sp-info > .info {
-  height: 30px;
+.main > .wapper > .sp-info > .info > ul {
+  padding: 10px 0;
+}
+.main > .wapper > .sp-info > .info > ul > li {
+  display: inline-block;
+  height: 32px;
+  width: 96px;
+}
+.main > .wapper > .sp-info > .info > ul > .quer {
+  width: 90px;
+  line-height: 42px;
+  text-align: center;
+}
+.main > .wapper > .sp-info > .info > ul > .img {
+  width: 340px;
+}
+.main > .wapper > .sp-info > .info > ul > .img > img {
+  vertical-align: middle;
+}
+.main > .wapper > .sp-info > .info > ul > .num {
+  width: 105px;
+}
+.main > .wapper > .sp-info > .info > ul > .num a {
+  width: 16px;
+  margin-top: 5px;
+  background: #f0f0f0;
+  border: 1px solid #f0f0f0;
+  font-size: 14px;
+  color: #222;
+}
+.main > .wapper > .sp-info > .info > ul > .num > input {
+  vertical-align: -2px;
+  margin-top: 5px;
+  margin-right: 2px;
+  width: 38px;
+}
+.main > .wapper > .sp-info > .info > ul li:nth-child(9) > a {
+  color: #1c8bde;
 }
 .main > .wapper .coupon {
   font-size: 12px;
@@ -293,7 +329,7 @@ footer {
   background: #3b3f4a;
   height: 355px;
 }
-footer > .wapper > .foot-info > .info {
+footer > .wapper > .foot-info > .cinfo {
   border-right: 1px solid #444853;
   width: 215px;
   height: 150px;
@@ -301,24 +337,24 @@ footer > .wapper > .foot-info > .info {
   color: #acb1bb;
   margin: 30px 0 ;
 }
-footer > .wapper > .foot-info > .info > h5 {
+footer > .wapper > .foot-info > .cinfo > h5 {
   margin-left: 65px ;
   font-size: 16px;
   font-weight: 400;
   line-height: 30px;
 }
-footer > .wapper > .foot-info > .info > ul {
+footer > .wapper > .foot-info > .cinfo > ul {
   margin-left: 65px ;
 }
-footer > .wapper > .foot-info > .info > ul > li {
+footer > .wapper > .foot-info > .cinfo > ul > li {
   width: 100px;
 }
-footer > .wapper > .foot-info > .info > ul > li > a {
+footer > .wapper > .foot-info > .cinfo > ul > li > a {
   font-size: 12px;
   color: #acb1bb;
   line-height: 20px;
 }
-footer > .wapper > .foot-info > .info li:hover a {
+footer > .wapper > .foot-info > .cinfo li:hover a {
   text-decoration: underline;
 }
 footer > .wapper > .foot-info > .erwm {
@@ -1238,5 +1274,3 @@ input[type=text]:focus,input[type=password]:focus {
   display: none;
   font-size: 12px
 }
-
-

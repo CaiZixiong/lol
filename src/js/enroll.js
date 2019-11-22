@@ -25,6 +25,7 @@ define(['jquery','md5'], function($) {
         $('#phone').on('keyup', function() {
                 if (num.test($('#phone').val())) {
                     $('.uphone').html('通过验证').addClass('green').removeClass('red')
+                   
                 } else {
                     $('.uphone').html('未通过验证').addClass('red').removeClass('green')
                 }
@@ -41,7 +42,8 @@ define(['jquery','md5'], function($) {
                 },
                   
                   success: function (res) {
-                     alert(JSON.parse(res).msg)
+                     alert(JSON.parse(res).msg);
+                     
                   }
               });
                 // location.reload(); //刷新页面

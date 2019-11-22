@@ -1,6 +1,6 @@
-define(['jquery'],function($){
+define(['jquery','cookie'],function($,cookie){
     return{
-       renderinfo:function(){
+       renderinfo:function(callback){
          let id=location.search.split('=')[1];
       
            $.ajax({
@@ -12,11 +12,11 @@ define(['jquery'],function($){
                dataType: "json",
                
                success: function (res) {
-                   console.log(res)
+                   
                     let temp='';
                   
-                      let pic = JSON.parse(res.smpic);
-                    //   console.log(pic)
+                   let pic = JSON.parse(res.smpic);
+                   
                      temp+=` 
                     
                      <div class="info ">
@@ -35,7 +35,7 @@ define(['jquery'],function($){
                                     <p class="wx">微信价:<a href="">￥${res.vxprice}</a></p>
                                   </div>
                                   <p class="p">期限:永久</p>
-                                  <a href="" class="car">加入购物车</a> <a href="" class="gei">赠送</a>
+                                  <a href="javascript:;" class="car">加入购物车</a> <a href="" class="gei">赠送</a>
                               </div>
                          </div>
                          <div class="xq">
@@ -51,9 +51,39 @@ define(['jquery'],function($){
                       
                 
                     $('.main-right').append(temp);
+                    
+                    callback&&callback(res.id,res.price);
+                    
                }
            })
+       },
+      
+      addcar:function(id,price){
+        alert('加入购物车成功');
+     
+       let shop =cookie.get('shop');
+     console.log(shop);
+       let product={
+           id:id,
+           price:price,
        }
+      
+       if(shop){
+        shop=JSON.parse(shop);
+           if(shop.some(elm=>elm.id==id)){
+             null
+           }else{
+            shop.push(product);
+            cookie.set('shop',JSON.stringify(shop),1);
+           }
+       }else{
+       shop=[];
+       shop.push(product);  
+       cookie.set('shop',JSON.stringify(shop),1);
+       }
+      
+    
+      }
 
     }
 })  
