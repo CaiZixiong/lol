@@ -6,6 +6,7 @@ require.config({
         dr:"./dr",
         drajax:"drajax",
         md5:"./jquery.md5",
+        cookie:"./cookie",
         get:'./get-render-HOME',
       
       
@@ -41,6 +42,6 @@ require(['jquery','dr','HOME','drajax'],function($,dr,HOME,  drajax){
 require(['jquery','md5','dr','drajax'],function($,md5,dr,drajax){
     drajax.drajax();
 });
-require(['jquery','get'],function($,get){
+require(['jquery','cookie','get'],function($,cookie,get){
     get.render();
 });

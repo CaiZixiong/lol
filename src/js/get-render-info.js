@@ -1,6 +1,10 @@
 define(['jquery','cookie'],function($,cookie){
     return{
        renderinfo:function(callback){
+         if(cookie.get('car')==undefined){
+          $('#car1').html('购物车 ('+0+')');
+         }else{
+        $('#car1').html('购物车 ('+cookie.get('car')+')');}
          let id=location.search.split('=')[1];
       
            $.ajax({

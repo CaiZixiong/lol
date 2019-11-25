@@ -1,7 +1,11 @@
-define(['jquery'],function($){
+define(['jquery','cookie'],function($,cookie){
      return{
         render:function(){
-      
+            if(cookie.get('car')==undefined){
+                $('.car1').html( '购物车 ('+0+')');
+            }else{
+            $('.car1').html( '购物车 ('+cookie.get('car')+')');}
+           
             $.ajax({
                 type: "get",
                 url: "http://127.0.0.1:8080/1910exercise/lol/lib/render.HOME.php",
@@ -41,6 +45,7 @@ define(['jquery'],function($){
                     </div>`;
                      });
                      $('#new-mian').append(temp);
+                     
                 }
             })
         }

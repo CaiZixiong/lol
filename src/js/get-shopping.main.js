@@ -9,10 +9,20 @@ require.config({
     }
 });
 require(['jquery','getshopp'],function($,getshopp ){
-    getshopp.shopping(function(){
-        $('.sc').on('click',function( ){
+    getshopp.shopping(function(id){
+        $('.sc').on('click',function(){
            $(this).parents('.tr-info').remove()
-        })
+           
+        });
+        $('.jia').on('click',function(){
+            alert('不能在加了');
+        });
+        $('.jian').on('click',function(){
+            alert('不能在减了')
+        });
+      
+        
+        
     })
 });
 require(['jquery','dr','HOME','drajax'],function($,dr,HOME,  drajax){
